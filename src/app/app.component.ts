@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  bools: boolean = false;
+
+  nums: Array<number> = [1, 2.5, 5];
+
+  strs: Array<string> = ['hi', 'there'] ;
+
+  test:  object = {id: 1, name: 'test'};
+  user: object = {id: 2, name: 'user'};
+
+  objs: Array<object> = [this.test, this.user];
+
+  types: Array<any> = [this.bools, this.nums, this.strs, this.objs];
+
+  getTypeof(){
+    console.log(this.types);
+  }
 }
