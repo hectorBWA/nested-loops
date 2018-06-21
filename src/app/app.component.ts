@@ -21,7 +21,8 @@ export class AppComponent {
 
   types: Array<any> = [this.bools, this.nums, this.strs, this.objs];
 
-  getTypeof(){
-    console.log(this.types);
+  getTypeof(types){
+    
+    return typeof types;
   }
 }
