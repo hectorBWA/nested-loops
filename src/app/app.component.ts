@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
 
-  bools: boolean = false;
+  bools: Array<boolean> = [true, false];
 
   nums: Array<number> = [1, 2.5, 5];
 
@@ -21,8 +21,8 @@ export class AppComponent {
 
   types: Array<any> = [this.bools, this.nums, this.strs, this.objs];
 
-  getTypeof(types){
+  getTypeof(x: any){
     
-    return typeof types;
+    return typeof x;
   }
 }

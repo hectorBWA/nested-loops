@@ -1,5 +1,12 @@
-<h1>{{types}}</h1>
-
-<li (typeof of val is 'object' true: ? false)>
-  <p ngStyle="{text-transform: capitalize}" ()="getTypeof($event)"></p>
-</li>
+<!-- <h1>{{types}}</h1> -->
+<h1>Types</h1>
+<ul>
+  <li *ngFor="let type of types; let i = index">
+    <p style="text-transform: capitalize">{{getTypeof(type[0])}}</p>
+    <ul>
+      <li *ngFor="let val of type">
+        {{getTypeof(val) == 'object' ? val.name + ' ' + val.id: val}}
+      </li> 
+    </ul>
+  </li>
+</ul>
